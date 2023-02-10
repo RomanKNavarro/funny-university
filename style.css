@@ -1,0 +1,29 @@
+/* applicable for ALL html elems, unless otherwise stated: */
+* {
+  margin: 0;
+  padding: 0;
+  /* FROM GOOGLE FONTS */
+  /* font-family: 'Poppins', sans-serif; */
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  /* background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/Wakanda.png); */
+  background-image: url(images/barracks.JPG);
+  background-position: center;
+  background-size: cover; 
+  /* ^ Scales the image (while preserving its ratio) to the smallest possible size to fill the container */
+  position: relative;  
+}
+
+.text-box h1 {
+  font-family: 'Black Ops One', cursive;
+  font-size: 62px;
+  color: #fff;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
