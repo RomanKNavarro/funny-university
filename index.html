@@ -11,13 +11,37 @@
     <!-- GOOGLE FONT SHIT. Includes black ops and Poppins fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Playfair+Display+SC&display=swap" rel="stylesheet">
   </head>
   <body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="nav">
+      <!-- what's the index.html in the href here for? remember that "a" images are "anchor-type",
+         meaning the user can click on them-->
+      <a href="index.html" class="logo"><img src="images/black-fist-better.png" alt=""></a>
+      <div class="nav-links" id="navLinks">
+        <!-- call hideMenu() func. when close button clicked on. showMenu() used with menu button.
+        ONLY FOR MOBILE.-->
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href=" ">HOME</a></li>
+          <li><a href=" ">ABOUT</a></li>
+          <li><a href=" ">COURSE</a></li>
+          <li><a href=" ">BLOG</a></li>
+          <li><a href=" ">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <!-- WELCOME SECTION -->
     <section class="header">
+
+
       <div class="text-box">
         <h1>BLACK POWER MILITARY ACADEMY</h1>
-        <p>Quoquo Modo Necessarium</p>
+        <p>"Quoquo Modo Necessarium"</p>
       </div>
     </section>
 

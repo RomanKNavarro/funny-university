@@ -1,29 +1,64 @@
 /* applicable for ALL html elems, unless otherwise stated: */
+/* 
+    font-family: 'Black Ops One', cursive;
+
+    font-family: 'Playfair Display SC', serif;
+*/
 * {
   margin: 0;
   padding: 0;
   /* FROM GOOGLE FONTS */
-  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Playfair Display SC', serif;
 }
+
+/* NAVBAR SHIT */
+.logo {
+  /* justify-content: left; */
+  padding-right: -10000%;
+}
+
+.nav {
+  /* display: flex;
+  justify-content: flex-end;
+  position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background: var(--main-red);    */
+  background: linear-gradient(rgba(179, 180, 182, 0.7), rgba(201, 202, 203, 0.7));
+  z-index: 10;
+} 
 
 .header {
   min-height: 100vh;
   width: 100%;
-  /* background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/Wakanda.png); */
-  background-image: url(images/barracks.JPG);
+  /* background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/barracks.JPG); */
+  background-image: linear-gradient(rgba(179, 180, 182, 0.7), rgba(201, 202, 203, 0.7)), url(images/barracks.JPG);
   background-position: center;
   background-size: cover; 
-  /* ^ Scales the image (while preserving its ratio) to the smallest possible size to fill the container */
   position: relative;  
 }
-
+.text-box {
+  width: 90%;
+  color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 .text-box h1 {
   font-family: 'Black Ops One', cursive;
-  font-size: 62px;
-  color: #fff;
+  font-size: 150px;
 }
 .text-box p {
+  font-family: 'Black Ops One', cursive;
   margin: 10px 0 40px;
-  font-size: 14px;
-  color: #fff;
+  font-size: 30px;
+  padding-top: 100px;
+}
+
+.logo img {
+  padding-top: 5px;
+  padding-left: 5px;
 }
