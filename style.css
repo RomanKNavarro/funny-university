@@ -1,39 +1,71 @@
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+} 
+:root {
+  --field-gray: #9a9494;
+ }
+
 /* applicable for ALL html elems, unless otherwise stated: */
 /* 
     font-family: 'Black Ops One', cursive;
-
     font-family: 'Playfair Display SC', serif;
 */
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Black Ops One', cursive;
   /* FROM GOOGLE FONTS */
-  font-family: 'Playfair Display SC', serif;
+  /* font-family: 'Playfair Display SC', serif; */
 }
 
-/* NAVBAR SHIT */
-.logo {
-  /* justify-content: left; */
-  padding-right: -10000%;
+html {
+  box-sizing: border-box; 
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
+/****************************************** NAVBAR SHIT ******************************************/
 .nav {
-  /* display: flex;
-  justify-content: flex-end;
-  position: fixed; */
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* background: var(--main-red);    */
-  background: linear-gradient(rgba(179, 180, 182, 0.7), rgba(201, 202, 203, 0.7));
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 25px;
+  left: 10px;
+  width: 6%;
+  height: 25%;
   z-index: 10;
 } 
+/* for the overall list */
+ul {
+  list-style: none;
+  /* line-height: 25px; */
+  line-height: 21pt;
+}
+/* for each individual list item */
+li a {
+  text-decoration: none;
+  color: var(--main-white);
+  padding: 2.6rem;    /* padding for the left */
+  font-size: 15px;
+  margin: 10px 0 0 0;
+}
+a:hover { 
+  text-decoration: underline;
+}
+/* p { margin: 10px 0 0 0; } */
 
+.nav {
+  background-color: var(--field-gray);
+  outline-style: solid;
+}
+
+/****************************************** FRONT PAGE SHIT ******************************************/
 .header {
   min-height: 100vh;
   width: 100%;
-  /* background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/barracks.JPG); */
-  background-image: linear-gradient(rgba(179, 180, 182, 0.7), rgba(201, 202, 203, 0.7)), url(images/barracks.JPG);
+  background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/barracks.JPG);
+  /* background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/4k/malcolm_big.png); */
   background-position: center;
   background-size: cover; 
   position: relative;  
@@ -48,17 +80,39 @@
   text-align: center;
 }
 .text-box h1 {
-  font-family: 'Black Ops One', cursive;
+  /* font-family: 'Black Ops One', cursive; */
   font-size: 150px;
 }
 .text-box p {
-  font-family: 'Black Ops One', cursive;
+  /* font-family: 'Black Ops One', cursive; */
   margin: 10px 0 40px;
   font-size: 30px;
   padding-top: 100px;
 }
-
 .logo img {
   padding-top: 5px;
   padding-left: 5px;
+}
+
+/****************************************** QUOTE SECTION ******************************************/
+/* .quote-section {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  background-image: linear-gradient(rgba(179, 180, 182, 0.7), rgba(201, 202, 203, 0.7)), url(images/4k/malcom_big.png);
+} */
+
+.quote-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background-size: cover;
+  /* background-image: url(images/4k/malcolm_big.png); */
+  background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/4k/malcolm_big.png);
+  /* background: var(--main-blue); */
+
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  position: relative;  
 }
