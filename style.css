@@ -14,6 +14,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Black Ops One', cursive;
   /* FROM GOOGLE FONTS */
   /* font-family: 'Playfair Display SC', serif; */
@@ -64,13 +65,15 @@ a:hover {
 .header {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/barracks.JPG);
+  /* background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/barracks.JPG); */
+  background-image: linear-gradient(rgba(183, 185, 189, 0.7), rgba(183, 185, 189, 0.7)), url(images/barracks.JPG);
+
   /* background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/4k/malcolm_big.png); */
   background-position: center;
   background-size: cover; 
   position: relative;  
 }
-.text-box {
+.welcome {
   width: 90%;
   color: #000000;
   position: absolute;
@@ -79,11 +82,12 @@ a:hover {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.text-box h1 {
+.welcome h1 {
+  /* REMEMBER: H1, H2, ETC. ARE FOR TITLES */
   /* font-family: 'Black Ops One', cursive; */
   font-size: 150px;
 }
-.text-box p {
+.welcome p {
   /* font-family: 'Black Ops One', cursive; */
   margin: 10px 0 40px;
   font-size: 30px;
@@ -95,24 +99,41 @@ a:hover {
 }
 
 /****************************************** QUOTE SECTION ******************************************/
-/* .quote-section {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  padding-top: 100px;
-  background-image: linear-gradient(rgba(179, 180, 182, 0.7), rgba(201, 202, 203, 0.7)), url(images/4k/malcom_big.png);
-} */
-
-.quote-section {
+.quotes2 {
   text-align: center;
   padding: 10rem 2rem;
   background-size: cover;
   /* background-image: url(images/4k/malcolm_big.png); */
-  background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/4k/malcolm_big.png);
+  background-image: linear-gradient(rgba(183, 185, 189, 0.7), rgba(183, 185, 189, 0.7)), url(images/4k/malcolm_big.png);
   /* background: var(--main-blue); */
-
   min-height: 100vh;
   width: 100%;
   background-position: center;
   position: relative;  
+}
+.quotes h1 {
+  font-size: 100px;
+}
+.quotes p {
+  margin: 10px 0 40px;
+  font-size: 30px;
+  padding-top: 60px;
+}
+
+/****************************************** SLIDE SHIT ******************************************/
+
+.quote-container {
+  width: 100%;
+  /* height: 100vh; */
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper {
+  width: 80%;
+  height: fit-content;
+}
+.swiper-slide img {
+  width: 100%;
 }

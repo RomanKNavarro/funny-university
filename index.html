@@ -12,13 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Playfair+Display+SC&display=swap" rel="stylesheet">
+
+    <!-- MOBILE SLIDER SHIT CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
   </head>
   <body>
-
     <!-- NAVBAR -->
     <nav id="navbar" class="nav">
       <!-- what's the index.html in the href here for? remember that "a" images are "anchor-type",
-         meaning the user can click on them-->
+        meaning the user can click on them-->
       <a href="index.html" class="logo"><img src="images/black-fist-better.png" alt=""></a>
       <div class="nav-links" id="navLinks">
         <ul>
@@ -33,23 +36,47 @@
 
     <!-- WELCOME SECTION -->
     <section class="header">
-      <div class="text-box">
+      <div class="welcome">
         <h1>BLACK POWER MILITARY ACADEMY</h1>
         <p>"Quoquo Modo Necessarium"</p>
       </div>
     </section>
 
     <!-- QUOTE SECTION -->
-    <section class="quote-section">
+    <!-- <section class="quotes">
       <div class="text-box">
-        <h1>BLACK POWER MILITARY ACADEMY</h1>
-        <p>"Quoquo Modo Necessarium"</p>
+        <h1>"BY ANY MEANS NECESSARY"</h1>
+        <p>-Malcolm X</p>
+      </div>
+    </section> -->
+
+    <section class="quotes">
+      <div class="quote-container">
+        <!-- ALL THIS SHIT PASTED FROM SLIDER WEBSITE -->
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="images/4k/malcolm_big.png"></div>
+            <div class="swiper-slide"><img src="images/4k/douglassLol.png"></div>
+            <div class="swiper-slide"><img src="images/4k/marcus_garvey.jpg"></div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        
+          <!-- If we need navigation buttons. I DON'T NEED THIS -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
       </div>
     </section>
 
-    <!-- <section class="course">
-      <h1>Courses We Offer</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-    </section> -->
+    <!-- MORE SLIDER SHIT -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
