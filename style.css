@@ -124,6 +124,7 @@ a:hover {
 
 .quote-container {
   width: 100%;
+  /* IMPOSTER */
   /* height: 100vh; */
   background: #222;
   display: flex;
@@ -136,4 +137,12 @@ a:hover {
 }
 .swiper-slide img {
   width: 100%;
+}
+/* FOR THE COLORS OF THE ARROWS/DOTS. 
+HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+  color:rgba(43, 181, 33, 0.7)
+} 
+.swiper .swiper-pagination-bullet-active {
+  background: rgba(43, 181, 33, 0.7)
 }
