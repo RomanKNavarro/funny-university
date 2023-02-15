@@ -58,10 +58,20 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide" id="malcolm"><img src="images/4k/malcolm_big.png"></div>
-            <div class="swiper-slide" id="douglass"><img src="images/4k/douglassLol.png"></div>
-            <div class="swiper-slide" id="garvey"><img src="images/4k/marcus_garvey.jpg"></div>
-            ...
+            <div class="swiper-slide" id="malcolm">
+              <img src="images/4k/malcolm_big.png">
+              <p>"It’s liberty or death. It’s freedom for everybody or freedom for nobody." -Malcolm X</p>
+            </div>
+            <div class="swiper-slide" id="douglass">
+              <img src="images/4k/douglassLol.png">
+              <p>"It is not light that we need, but fire; it is not the gentle shower, but thunder. We need the storm, 
+                the whirlwind, and the earthquake." -Frederick Douglass</p>
+            </div>
+            <div class="swiper-slide" id="garvey">
+              <img src="images/4k/marcus_garvey.jpg">
+              <p>"The Black skin is not a badge of shame, but rather a glorious 
+                symbol of national greatness." -Marcus Garvey</p>
+            </div>
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
@@ -83,7 +93,7 @@
       const swiper = new Swiper('.swiper', {
         autoplay: {
           // IN MILLISECONDS
-          delay: 3000,
+          delay: 7000,
           disableOnInteraction: false,
         },
         loop: true,

@@ -73,6 +73,7 @@ a:hover {
   background-size: cover; 
   position: relative;  
 }
+/* THE TEXT IN THE WELCOME SECTION */
 .welcome {
   width: 90%;
   color: #000000;
@@ -123,6 +124,7 @@ a:hover {
 /****************************************** SLIDE SHIT ******************************************/
 
 .quote-container {
+  position: relative;
   padding-top: 15%;
   padding-bottom: 15%;
   width: 100%;
@@ -144,6 +146,16 @@ a:hover {
   width: 100%;
   height: 900px;
 }
+.swiper-slide p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* color: var(--field-gray); */
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 3px red;
+}
+
 /* FOR THE COLORS OF THE ARROWS/DOTS. 
 HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 .swiper .swiper-button-prev, .swiper .swiper-button-next {
