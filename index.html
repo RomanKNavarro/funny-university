@@ -58,9 +58,9 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><img src="images/4k/malcolm_big.png"></div>
-            <div class="swiper-slide"><img src="images/4k/douglassLol.png"></div>
-            <div class="swiper-slide"><img src="images/4k/marcus_garvey.jpg"></div>
+            <div class="swiper-slide" id="malcolm"><img src="images/4k/malcolm_big.png"></div>
+            <div class="swiper-slide" id="douglass"><img src="images/4k/douglassLol.png"></div>
+            <div class="swiper-slide" id="garvey"><img src="images/4k/marcus_garvey.jpg"></div>
             ...
           </div>
           <!-- If we need pagination -->
@@ -100,6 +100,18 @@
           prevEl: '.swiper-button-prev',
         },
       });
+
+      const heroes = {
+        douglass: [],
+        malcolm: [],
+        garvey: []
+      }
+
+      function currentPerson() {
+        var person_name = document.getElementById("swiper-slide");
+        
+      }
+      
     </script>
   </body>
 </html>
