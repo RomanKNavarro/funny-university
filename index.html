@@ -25,32 +25,26 @@
       <a href="index.html" class="logo"><img src="images/black-fist-better.png" alt=""></a>
       <div class="nav-links" id="navLinks">
         <ul>
-          <li><a href=" ">HOME</a></li>
-          <li><a href=" ">ABOUT</a></li>
-          <li><a href=" ">COURSE</a></li>
-          <li><a href=" ">BLOG</a></li>
+          <li><a href="#header">HOME</a></li>
+          <li><a href="#quotes">QUOTES</a></li>
+          <li><a href="#mission">ABOUT</a></li>
+          <li><a href="#training">TRAINING</a></li>
           <li><a href=" ">CONTACT</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- WELCOME SECTION -->
-    <section class="header">
+    <section class="header" id="header">
       <div class="header-text">
         <h1>BLACK POWER MILITARY ACADEMY</h1>
-        <p>"Quoquo Modo Necessarium"</p>
+        <div class="latin"><p>"Quoquo Modo Necessarium"</p></div> 
+        <div class="date"><p>est. 1873</p></div> 
       </div>
     </section>
 
-    <!-- QUOTE SECTION -->
-    <!-- <section class="quotes">
-      <div class="text-box">
-        <h1>"BY ANY MEANS NECESSARY"</h1>
-        <p>-Malcolm X</p>
-      </div>
-    </section> -->
-
-    <section class="quotes">
+    <!-- ****************************************** QUOTE SECTION ****************************************** -->
+    <section class="quotes" id="quotes">
       <div class="quote-container">
         <!-- ALL THIS SHIT PASTED FROM SLIDER WEBSITE -->
         <!-- Slider main container -->
@@ -73,6 +67,10 @@
               <p>"The Black skin is not a badge of shame, but rather a glorious 
                 symbol of national greatness." -Marcus Garvey</p>
             </div>
+            <div class="swiper-slide" id="same">
+              <img src="images/uncle-samuel.png">
+              <p>"I WANT YO ASS <br>&emsp;FOR BPMA"<br> -Uncle Sam (L. Jackson)</p>
+            </div>
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
@@ -87,22 +85,73 @@
       </div>
     </section>
 
-    <section class="mission">
+    <!-- ****************************************** MISSION SECTION ****************************************** -->
+    <section class="mission" id="mission">
       <div class="mission-text">
         <h1>OUR MISSION</h1>
-        <p>The one and only goal that Black Power Military Academy has ever striven for in it's 150 years of existence is to transform boys 
-          like you into MEN. </p>
+        <p>
+          The one and only goal that Black Power Military Academy has ever striven for in it's 150 years of existence is to 
+          transform boys like you into MEN. 
+          <br><br>
+          By becoming a MAN, you'll be able to defend your People and lead them into the battle against Systematic Oppression and 
+          Racism that has plagued America for the last two centuries and counting. 
+          <br><br>
+          So whatchu' waitin' fo', punk? Stop complaining so much about your "rights" and how much you're always being 
+          oppressed while you sit in your comfy middle-class suburbia home and take action!!!
+        </p>  
       </div>
     </section>
 
-    <!-- MORE SLIDER SHIT -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- ****************************************** TRAINING SECTION ****************************************** -->
+    <section class="training" id="training">
+      <div class="training-text">
+        <h1>TRAINING</h1>
+        <p>Using our state-of-the-art training facilities and only the finest equipment and drill sergeants, we will make it our firstmost 
+          priority to smack the BITCH out yo ass and transform you into a remorseless NATURAL BORN KILLER. No one -not even your "friends"-
+          will patronize you any more once you put them and their associates at the recieving end of your shiny new M4A1 5.56mm Tactical Carbine.</p>
+      </div>
+    </section>
 
+    <section class="pictures">
+      <!-- EVERY SINGLE IMAGE REQUIRES A TRAINING-COL -->
+      <div class="row">
+        <!-- SHOOTING -->
+        <div class="pictures-col">
+          <img src="images/shooting/hot-svg.jpeg" alt="">
+        </div>
+        <div class="pictures-col">
+          <img src="images/shooting/afroArmy.png" alt="">
+        </div>
+        <div class="pictures-col">
+          <img src="images/shooting/Samuel-L-Jackson.jpg" alt="">
+        </div>
+        <div class="pictures-col">
+          <img src="images/shooting/malcolm-gun.png" alt="">
+        </div>
+        <div class="pictures-col">
+          <img src="images/shooting/gambino.png" alt="">
+        </div>
+
+        <!-- EXCERCISE -->
+        <div class="pictures-col">
+          <img src="images/shooting/malcolm-gun.png" alt="">
+        </div>
+        <div class="pictures-col">
+          <img src="images/shooting/malcolm-gun.png" alt="">
+        </div>
+        <div class="pictures-col">
+          <img src="images/shooting/malcolm-gun.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- ****************************************** MORE SLIDER STUFF ****************************************** -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper('.swiper', {
         autoplay: {
           // IN MILLISECONDS
-          delay: 7000,
+          delay: 5000,
           disableOnInteraction: false,
         },
         loop: true,
@@ -119,18 +168,14 @@
           prevEl: '.swiper-button-prev',
         },
       });
-
       const heroes = {
         douglass: [],
         malcolm: [],
         garvey: []
       }
-
       function currentPerson() {
         var person_name = document.getElementById("swiper-slide");
-        
-      }
-      
+      }  
     </script>
   </body>
 </html>
