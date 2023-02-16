@@ -67,14 +67,12 @@ a:hover {
   width: 100%;
   /* background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/barracks.JPG); */
   background-image: linear-gradient(rgba(183, 185, 189, 0.7), rgba(183, 185, 189, 0.7)), url(images/barracks.JPG);
-
-  /* background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/4k/malcolm_big.png); */
   background-position: center;
   background-size: cover; 
   position: relative;  
 }
-/* THE TEXT IN THE WELCOME SECTION */
-.welcome {
+/* THE TEXT IN THE header-text SECTION */
+.header-text {
   width: 90%;
   color: #000000;
   position: absolute;
@@ -83,16 +81,21 @@ a:hover {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.welcome h1 {
+.header-text h1, .mission h1 {
   /* REMEMBER: H1, H2, ETC. ARE FOR TITLES */
   /* font-family: 'Black Ops One', cursive; */
   font-size: 150px;
 }
-.welcome p {
+.header-text p {
   /* font-family: 'Black Ops One', cursive; */
+  position: absolute;
   margin: 10px 0 40px;
   font-size: 30px;
   padding-top: 100px;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;  
 }
 .logo img {
   padding-top: 5px;
@@ -100,18 +103,6 @@ a:hover {
 }
 
 /****************************************** QUOTE SECTION ******************************************/
-.quotes2 {
-  text-align: center;
-  padding: 10rem 2rem;
-  background-size: cover;
-  /* background-image: url(images/4k/malcolm_big.png); */
-  background-image: linear-gradient(rgba(183, 185, 189, 0.7), rgba(183, 185, 189, 0.7)), url(images/4k/malcolm_big.png);
-  /* background: var(--main-blue); */
-  min-height: 100vh;
-  width: 100%;
-  background-position: center;
-  position: relative;  
-}
 .quotes h1 {
   font-size: 100px;
 }
@@ -164,3 +155,36 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 .swiper .swiper-pagination-bullet-active {
   background: rgba(0, 0, 0, 1);
 }
+
+/****************************************** MISSION SECTION ******************************************/
+.mission {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(184, 176, 176, 0.7), rgba(220, 218, 218, 0.7)), url(images/handsome/houston.jpg);
+  /* background-image: url(images/handsome/houston.jpg); */
+  background-position: center;
+  background-size: cover; 
+  position: relative;  
+}
+
+.mission-text {
+  width: 90%;
+  color: #000000;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.mission-text p {
+  /* font-family: 'Black Ops One', cursive; */
+  position: absolute;
+  margin: 10px 0 40px;
+  font-size: 30px;
+  padding-top: 300px;
+
+  /* left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;   */
+}
+
