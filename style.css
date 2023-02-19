@@ -3,8 +3,10 @@
   zoom: 1.0;
 } 
 :root {
-  --field-gray: #9a9494;
+  --confederate-gray: #9a9494;
   --dark-gray: #3c3b3b;
+  --white-russian: #ffff;
+  --ebony-black: #000000;
  }
 
 /* applicable for ALL html elems, unless otherwise stated: */
@@ -34,6 +36,20 @@ h1 {
 h2 {
   font-size: 100px;
 }
+p {
+  font-size: 30px;
+}
+
+/* YOOO THIS MEDIA QUERY FOR MACBOOK ACTUALLY WORKS */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  h1 {
+    font-size: 90px;
+  }
+  h2 {
+    font-size: 70px;
+  }
+}
 
 /****************************************** NAVBAR SHIT ******************************************/
 .nav {
@@ -45,7 +61,13 @@ h2 {
   width: 6%;
   height: 25%;
   z-index: 10;
+  background-color: var(--confederate-gray);
+  outline-style: solid;
 } 
+.logo img {
+  padding-top: 5px;
+  padding-left: 5px;
+}
 /* for the overall list */
 ul {
   list-style: none;
@@ -55,17 +77,40 @@ ul {
 /* for each individual list item */
 li a {
   text-decoration: none;
-  color: var(--main-white);
-  padding: 2.6rem;    /* padding for the left */
+  color: var(--ebony-black);
+  padding: 2.6rem;     /* padding for the left */
   font-size: 15px;
   margin: 10px 0 0 0;
 }
 a:hover { 
   text-decoration: underline;
 }
-.nav {
-  background-color: var(--field-gray);
-  outline-style: solid;
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 25px;
+    left: 10px;
+    width: 7.5%;
+    height: 30%;
+    z-index: 10;
+    background-color: var(--confederate-gray);
+    outline-style: solid;
+  } 
+  li a {
+    text-decoration: none;
+    color: var(--ebony-black);
+    font-size: 15px;
+    margin: 10px 0 0 0;
+    padding: 2.0rem;
+  }
+  .logo img {
+    padding-top: 5px;
+    padding-left: 10px;
+  }
 }
 
 /****************************************** FRONT PAGE SHIT ******************************************/
@@ -82,7 +127,7 @@ a:hover {
 /* THE TEXT IN THE header-text SECTION */
 .header-text {
   width: 90%;
-  color: #000000;
+  color: var(--ebony-black);
   position: absolute;
   top: 40%;
   left: 50%;
@@ -93,7 +138,7 @@ a:hover {
   position: absolute;
   margin: 10px 0 40px;
   font-size: 30px;
-  padding-top: 100px;
+  padding-top: 200px;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;  
@@ -105,11 +150,20 @@ a:hover {
   /* text-align: center;  */
   /* padding-top: 300px; */
   padding-top: 325px;
-  font-size: 25px;
 }
-.logo img {
-  padding-top: 5px;
-  padding-left: 5px;
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  .date {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .date p {
+    font-size: 20px;
+    padding-top: 200px;
+  } 
 }
 
 /****************************************** QUOTE SECTION ******************************************/
@@ -118,7 +172,6 @@ a:hover {
 }
 .quotes p {
   margin: 10px 0 40px;
-  font-size: 30px;
   padding-top: 60px;
 }
 
@@ -131,7 +184,8 @@ a:hover {
   /* IMPOSTER */
   /* height: 100vh; */
   /* background: #222; */
-  background: #3c3b3b;
+  /* background: #3c3b3b; */
+  background: var(--dark-gray);
   display: flex;
   /* align-items: center;
   justify-content: center; */
@@ -139,35 +193,44 @@ a:hover {
 .swiper {
   width: 60%;
   height: fit-content;
-  border: 10px solid black;
+  /* border: 10px solid black; */
+  border: 10px solid var(--ebony-black);
   outline-style: solid;
 }
 .swiper-slide img {
   width: 100%;
   height: 900px;
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  .swiper-slide img {
+    width: 100%;
+    height: 700px;
+  } 
+}
+
 .swiper-slide p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* color: var(--field-gray); */
-  color: rgb(255, 255, 255);
+  /* color: var(--confederate-gray); */
+  color: var(--white-russian);
   text-shadow: 3px 3px 3px red;
 }
-
 /* FOR THE COLORS OF THE ARROWS/DOTS. 
 HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 .swiper .swiper-button-prev, .swiper .swiper-button-next {
-  color:rgba(0, 0, 0, 1);
+  color: var(--ebony-black);
 } 
 .swiper .swiper-pagination-bullet-active {
-  background: rgba(0, 0, 0, 1);
+  background: var(--ebony-black);
 }
 
 /****************************************** MISSION SECTION ******************************************/
 .mission {
-  min-height: 100vh;
+  min-height: 110vh;
   width: 100%;
   background-image: linear-gradient(rgba(199, 192, 192, 0.7), rgba(220, 218, 218, 0.7)), url(images/handsome/houston.jpg);
   /* background-image: url(images/handsome/houston.jpg); */
@@ -177,31 +240,29 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 }
 .mission-text {
   width: 90%;
-  color: #000000;
+  color: var(--ebony-black);
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 .mission-text p, .training-text p {
   /* font-family: 'Black Ops One', cursive; */
   position: absolute;
   margin: 10px 0 40px;
-  font-size: 30px;
   padding-top: 500px;
   left: 50%; 
   transform: translate(-50%, -50%);
   text-align: center;  
-  /* width: 1000px; */
   width: 55%;
-  /* line-height: 1.5; */
 }
 
 /****************************************** TRAINING SECTION ******************************************/
 /* this shit is necessary to stop the text from appearing at the very top of our page! */
 .training {
-  min-height: 100vh;
+  min-height: 80vh;
   width: 100%;
   background: var(--dark-gray);
   background-position: center;
@@ -210,42 +271,139 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 }
 .training-text {
   width: 100%;
-  color: #ffffff;
+  color: var(--white-russian);
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
+/* this extra shit added to decrease spacing from title */
 .training-text p {
   padding-top: 20%;
   line-height: 1.5;
 }
+.spec-text {
+  text-shadow: 3px 3px 3px red;
+  font-size: 30px;
+}
+.spec-text:hover {
+  text-decoration: none;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  /* add spacing for the macbook h1 titles */
+  .mission-text h1, .training-text h1 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
 
 /****************************************** PICTURES SECTION ******************************************/
+/* FOR THE WHOLE PAGE */
+.pictures h2 {
+  color: var(--white-russian);
+  margin-top: 5%;
+}
 .pictures {
-  width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 100px;
+  background: var(--dark-gray);
+  padding-bottom: 5%;
 }
 .pictures-col {
-  flex-basis: 31%;
-  border-radius: 10px;
-  margin-bottom: 5%;
-  text-align: left;
-}
+  flex-basis: 33.333333%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3%;
+  /* text-align: left; */
+  border: 5px solid black;
+  outline-style: solid;
+} 
 .pictures-col img {
   /* makes sure the images takes up the entire column item */
   width: 100%;
-  /* WHY DO WE NEED "border-radius" twice? It is used here to round the image itself. The other is to round the column item */
-  border-radius: 10px;
+  height: 400px;
+  /* width: 100px;
+  object-fit: cover; */
 }
-
 .row {
-  margin-top: 5%;
   display: flex;
-  justify-content: space-between; 
+  flex-wrap: wrap;
+  /* padding-left: 0; */
 }
 
+/****************************************** FAQS SECTION ******************************************/
+
+/* WHOLE ASS SECTION IS ALR. CENTERED. NO NEED TO DO FURTHER CENTERING SHIT FOR THE TEXT */
+.faqs {
+  margin: auto;
+  text-align: center;
+  padding-top: 180px;
+  background-image: linear-gradient(rgba(234, 226, 226, 0.7), rgba(225, 219, 219, 0.7)), url(images/soulfood.jpg);
+  min-height: 160vh;
+  background-repeat: no-repeat;
+}
+.faqs h1 {
+  width: 100%;
+  color: var(--ebony-black);
+  position: relative;
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+} 
+h3 {
+  padding-top: 7%;
+  margin-bottom: 2%;
+  font-size: 60px;
+  /* position: relative;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; */
+}
+li p {
+  /* YES I GOT THIS SHIT TO COMPRESS AAAND STAY CENTERED */
+  max-width: 75%;
+  /* margin: 0 auto 30px; 30PX CAUSES WHITE GAP AT BOTTOM */
+  margin: 0 auto 0px;
+  line-height: 1.5;
+}
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  /* add spacing for the macbook h3 titles */
+  h3 {
+    line-height: 1.1;
+  }
+}
+
+/****************************************** CONTACT SECTION ******************************************/
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 150px 0;
+  background-color: var(--dark-gray);
+  color: var(--white-russian);
+} 
+.footer h4 {
+  font-size: 20px;
+  padding-bottom: 5%;
+}
+.footer ul {
+  /* lol gotta use this width shit just to center the horizontal line. Primitive  */
+  width: 65%;
+  list-style-type: none;
+  /* display: table; */
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+}
+.footer ul li {
+  
+  padding: 50px;
+  display: table-cell;
+}
 
