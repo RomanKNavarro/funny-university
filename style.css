@@ -10,10 +10,6 @@
  }
 
 /* applicable for ALL html elems, unless otherwise stated: */
-/* 
-    font-family: 'Black Ops One', cursive;
-    font-family: 'Playfair Display SC', serif;
-*/
 * {
   margin: 0;
   padding: 0;
@@ -118,7 +114,6 @@ screen and (min-device-pixel-ratio : 1.5) {
 .header {
   min-height: 100vh;
   width: 100%;
-  /* background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/barracks.JPG); */
   background-image: linear-gradient(rgba(183, 185, 189, 0.7), rgba(183, 185, 189, 0.7)), url(images/barracks.JPG);
   background-position: center;
   background-size: cover; 
@@ -147,8 +142,6 @@ screen and (min-device-pixel-ratio : 1.5) {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* text-align: center;  */
-  /* padding-top: 300px; */
   padding-top: 325px;
 }
 
@@ -339,12 +332,25 @@ screen and (min-device-pixel-ratio : 1.5) {
 
 /* WHOLE ASS SECTION IS ALR. CENTERED. NO NEED TO DO FURTHER CENTERING SHIT FOR THE TEXT */
 .faqs {
+  width: 100%;
   margin: auto;
   text-align: center;
   padding-top: 180px;
-  background-image: linear-gradient(rgba(234, 226, 226, 0.7), rgba(225, 219, 219, 0.7)), url(images/soulfood.jpg);
+  /* background-image: linear-gradient(rgba(234, 226, 226, 0.7), rgba(225, 219, 219, 0.7)), url(images/soulfood.jpg); */
+  background-image: linear-gradient(rgba(234, 226, 226, 0.7), rgba(225, 219, 219, 0.7)), url(images/4k/black-students.png);
+  background-position: center;
+  background-size: cover;
   min-height: 160vh;
   background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: 150px;
+
+  /* min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(183, 185, 189, 0.7), rgba(183, 185, 189, 0.7)), url(images/barracks.JPG);
+  background-position: center;
+  background-size: cover; 
+  position: relative;  */
 }
 .faqs h1 {
   width: 100%;
@@ -357,11 +363,6 @@ h3 {
   padding-top: 7%;
   margin-bottom: 2%;
   font-size: 60px;
-  /* position: relative;
-  width: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; */
 }
 li p {
   /* YES I GOT THIS SHIT TO COMPRESS AAAND STAY CENTERED */
@@ -378,21 +379,21 @@ screen and (min-device-pixel-ratio : 1.5) {
   }
 }
 
-/****************************************** CONTACT SECTION ******************************************/
+/****************************************** CONTACT SECTION (SHIT MADE IN MACBOOK) ******************************************/
 .footer {
   width: 100%;
   text-align: center;
-  padding: 150px 0;
+  padding: 100px 0;
   background-color: var(--dark-gray);
   color: var(--white-russian);
 } 
 .footer h4 {
-  font-size: 20px;
-  padding-bottom: 5%;
+  font-size: 25px;
+  padding-bottom: 1%;
 }
 .footer ul {
   /* lol gotta use this width shit just to center the horizontal line. Primitive  */
-  width: 65%;
+  width: 90%;
   list-style-type: none;
   /* display: table; */
   display: inline-block;
@@ -400,10 +401,13 @@ screen and (min-device-pixel-ratio : 1.5) {
   margin: 0;
   padding: 0;
   left: 50%;
+  padding-bottom: 1%;
 }
 .footer ul li {
-  
   padding: 50px;
   display: table-cell;
+  font-size: 20px;
 }
-
+.footer p {
+  font-size: 12px;
+}
