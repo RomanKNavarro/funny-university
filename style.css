@@ -1,3 +1,4 @@
+/* USB WEBSIIIIIIIIIIIIITE (FIX THIS SHIT) */
 @viewport {
   width: device-width;
   zoom: 1.0;
@@ -46,8 +47,20 @@ screen and (min-device-pixel-ratio : 1.5) {
     font-size: 70px;
   }
 }
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
 
 /****************************************** NAVBAR SHIT ******************************************/
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -60,10 +73,7 @@ screen and (min-device-pixel-ratio : 1.5) {
   background-color: var(--confederate-gray);
   outline-style: solid;
 } 
-.logo img {
-  padding-top: 5px;
-  padding-left: 5px;
-}
+
 /* for the overall list */
 ul {
   list-style: none;
@@ -80,6 +90,14 @@ li a {
 }
 a:hover { 
   text-decoration: underline;
+}
+.logo img {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 2px;
+  max-width: 100%;
+  min-width: 30px;
+  height: auto;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
@@ -103,9 +121,43 @@ screen and (min-device-pixel-ratio : 1.5) {
     margin: 10px 0 0 0;
     padding: 2.0rem;
   }
+}
+
+@media screen and (max-width: 600px) {
   .logo img {
     padding-top: 5px;
-    padding-left: 10px;
+    padding-left: 2px;
+    padding-right: 3px;
+    max-width: 100%;
+    min-width: 30px;
+    height: auto;
+  }
+  /* for the ENTIRE navbar (logo, a links, background lol) */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 25px;
+    left: 5px;
+    /* width: 7.5%;
+    height: 15%; */
+    width: 13%;
+    height: 24%;
+    z-index: 10;
+    background-color: var(--confederate-gray);
+    outline-style: solid;
+  } 
+  ul {
+    list-style: none;
+    /* line-height: 25px; */
+    line-height: 15pt;
+  }
+  li a {
+    text-decoration: none;
+    color: var(--ebony-black);
+    padding: 0.3rem; /* padding for the left     */
+    font-size: 9px;
+    margin: 10px 0 0 0;
   }
 }
 
@@ -129,15 +181,17 @@ screen and (min-device-pixel-ratio : 1.5) {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+/* latin is a p */
 .header-text .latin {
   position: absolute;
-  margin: 10px 0 40px;
+  margin: 10px 0 35px;
   font-size: 30px;
   padding-top: 200px;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;  
 }
+/* date is also a p */
 .header-text .date {
   position: absolute;
   left: 50%;
@@ -151,10 +205,40 @@ screen and (min-device-pixel-ratio : 1.5) {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    
   }
   .date p {
     font-size: 20px;
+    padding-top: 200px;
+  } 
+}
+@media screen and (max-width: 600px) { 
+  /* .header {
+    min-height: 70vh;
+    width: 100%;
+    max-width: 1280px;
+    background-image: linear-gradient(rgba(183, 185, 189, 0.7), rgba(183, 185, 189, 0.7)), url(images/barracks.JPG);
+    background-position: center;
+    background-size: cover; 
+    position: relative;  
+  } */
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .date {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .latin p {
+    font-size: 15px;
+  }
+  .date p {
+    font-size: 12px;
     padding-top: 200px;
   } 
 }
@@ -164,7 +248,7 @@ screen and (min-device-pixel-ratio : 1.5) {
   font-size: 100px;
 }
 .quotes p {
-  margin: 10px 0 40px;
+  margin: 10px 0 35px;
   padding-top: 60px;
 }
 
@@ -202,7 +286,6 @@ screen and (min-device-pixel-ratio : 1.5) {
     height: 700px;
   } 
 }
-
 .swiper-slide p {
   position: absolute;
   top: 50%;
@@ -219,6 +302,25 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 } 
 .swiper .swiper-pagination-bullet-active {
   background: var(--ebony-black);
+}
+@media screen and (max-width: 600px) { 
+  .quote-container {
+    min-height: 100vh;
+  }
+  .swiper {
+    width: 90%;
+    height: fit-content;
+    /* border: 10px solid black; */
+    border: 10px solid var(--ebony-black);
+    outline-style: solid;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 300px;
+  } 
+  .swiper-slide p {
+    font-size: 15px;
+  }
 }
 
 /****************************************** MISSION SECTION ******************************************/
@@ -244,12 +346,26 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 .mission-text p, .training-text p {
   /* font-family: 'Black Ops One', cursive; */
   position: absolute;
-  margin: 10px 0 40px;
+  margin: 10px 0 35px;
   padding-top: 500px;
   left: 50%; 
   transform: translate(-50%, -50%);
   text-align: center;  
   width: 55%;
+}
+
+@media screen and (max-width: 600px) { 
+  /* add spacing for the macbook h1 titles */
+  .mission-text p, .training-text p {
+    /* font-family: 'Black Ops One', cursive; */
+    position: absolute;
+    margin: 10px 0 35px;
+    padding-top: 200px;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;  
+    width: 80%;
+  }
 }
 
 /****************************************** TRAINING SECTION ******************************************/
@@ -292,6 +408,26 @@ screen and (min-device-pixel-ratio : 1.5) {
     padding-bottom: 100px;
   }
 }
+@media screen and (max-width: 600px) { 
+  .training {
+    min-height: 40vh;
+  }
+  .training-text {
+    padding-top: 100px;
+  }
+
+  .mission-text h1, .training-text h1 {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  .spec-text {
+    text-shadow: 3px 3px 3px red;
+    font-size: 15px;
+  }
+  /* .training-text p {
+    
+  } */
+}
 
 /****************************************** PICTURES SECTION ******************************************/
 /* FOR THE WHOLE PAGE */
@@ -326,6 +462,21 @@ screen and (min-device-pixel-ratio : 1.5) {
   display: flex;
   flex-wrap: wrap;
   /* padding-left: 0; */
+}
+
+@media screen and (max-width: 600px) { 
+  /* add spacing for the macbook h1 titles */
+  .pictures-col img {
+    /* makes sure the images takes up the entire column item */
+    width: 100%;
+    height: 140px;
+    /* width: 100px;
+    object-fit: cover; */
+  }
+  /* .pictures {
+    padding-top: 60px;
+
+  } */
 }
 
 /****************************************** FAQS SECTION ******************************************/
@@ -378,6 +529,31 @@ screen and (min-device-pixel-ratio : 1.5) {
     line-height: 1.1;
   }
 }
+@media screen and (max-width: 600px) { 
+  .faqs {
+    padding-top: 20%;
+  }
+  /* add spacing for the macbook h1 titles */
+  .pictures-col img {
+    /* makes sure the images takes up the entire column item */
+    width: 100%;
+    height: 140px;
+    /* width: 100px;
+    object-fit: cover; */
+  }
+  .faqs h1 {
+    width: 100%;
+    color: var(--ebony-black);
+    position: relative;
+    font-size: 30px;
+    padding-bottom: 10%;
+  } 
+  h3 {
+    padding-top: 7%;
+    margin-bottom: 2%;
+    font-size: 20px;
+  }
+}
 
 /****************************************** CONTACT SECTION (SHIT MADE IN MACBOOK) ******************************************/
 .footer {
@@ -393,7 +569,7 @@ screen and (min-device-pixel-ratio : 1.5) {
 }
 .footer ul {
   /* lol gotta use this width shit just to center the horizontal line. Primitive  */
-  width: 90%;
+  width: 80%;
   list-style-type: none;
   /* display: table; */
   display: inline-block;
@@ -404,10 +580,77 @@ screen and (min-device-pixel-ratio : 1.5) {
   padding-bottom: 1%;
 }
 .footer ul li {
-  padding: 50px;
+  padding: 35px;
   display: table-cell;
-  font-size: 20px;
+  font-size: 18px;
 }
+.footer ul li a {
+  padding: 35px;
+  color: var(--white-russian);
+  font-size: 18px;
+  text-decoration: underline;
+}
+.footer ul li a:hover { 
+  color: #4b76db; 
+} /* CSS link hover */
 .footer p {
-  font-size: 12px;
+  font-size: 14px;
 }
+
+@media screen and (max-width: 630px) { 
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 100px 0;
+    background-color: var(--dark-gray);
+    color: var(--white-russian);
+  } 
+  .footer h4 {
+    font-size: 25px;
+    padding-bottom: 1%;
+  }
+  .footer ul {
+    /* lol gotta use this width shit just to center the horizontal line. Primitive  */
+    width: 20%;
+    list-style-type: none;
+    /* display: table; */
+    text-align: center;
+    /* margin: 0;
+    padding: 0;
+    left: 50%; */
+    padding-bottom: 1%;
+  }
+  .footer ul li {
+    font-size: 18px;
+  }
+  .footer ul li a {
+    padding: 35px;
+    color: var(--white-russian);
+    font-size: 18px;
+    text-decoration: underline;
+  }
+}
+
+/* nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 25px;
+  left: 10px;
+  width: 3%;
+  height: 20%;
+  z-index: 10;
+  background-color: var(--confederate-gray);
+  outline-style: solid;
+} 
+ul {
+  list-style: none;
+  line-height: 21pt;
+}
+li a {
+  text-decoration: none;
+  color: var(--ebony-black);
+  padding: 2.6rem;     
+  font-size: 15px;
+  margin: 10px 0 0 0;
+} */
