@@ -1,19 +1,19 @@
+/* USB WEBSIIIIIIIIIIIIITE (FIX THIS SHIT) */
 @viewport {
   width: device-width;
   zoom: 1.0;
 } 
 :root {
   --confederate-gray: #9a9494;
+  --confederate-gray: #9a9494;
   --dark-gray: #3c3b3b;
+  --white-russian: #ffff;
+  --ebony-black: #000000;
   --white-russian: #ffff;
   --ebony-black: #000000;
  }
 
 /* applicable for ALL html elems, unless otherwise stated: */
-/* 
-    font-family: 'Black Ops One', cursive;
-    font-family: 'Playfair Display SC', serif;
-*/
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +40,30 @@ p {
   font-size: 30px;
 }
 
+/* YOOO THIS MEDIA QUERY FOR MACBOOK ACTUALLY WORKS */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  h1 {
+    font-size: 90px;
+  }
+  h2 {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
 /****************************************** NAVBAR SHIT ******************************************/
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -53,6 +76,7 @@ p {
   background-color: var(--confederate-gray);
   outline-style: solid;
 } 
+
 /* for the overall list */
 ul {
   list-style: none;
@@ -62,13 +86,82 @@ ul {
 /* for each individual list item */
 li a {
   text-decoration: none;
-  color: var(--main-white);
-  padding: 2.6rem;    /* padding for the left */
+  color: var(--ebony-black);
+  padding: 2.6rem;     /* padding for the left */
   font-size: 15px;
   margin: 10px 0 0 0;
 }
 a:hover { 
   text-decoration: underline;
+}
+.logo img {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 2px;
+  max-width: 100%;
+  min-width: 30px;
+  height: auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 25px;
+    left: 10px;
+    width: 7.5%;
+    height: 30%;
+    z-index: 10;
+    background-color: var(--confederate-gray);
+    outline-style: solid;
+  } 
+  li a {
+    text-decoration: none;
+    color: var(--ebony-black);
+    font-size: 15px;
+    margin: 10px 0 0 0;
+    padding: 2.0rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo img {
+    padding-top: 5px;
+    padding-left: 2px;
+    padding-right: 3px;
+    max-width: 100%;
+    min-width: 30px;
+    height: auto;
+  }
+  /* for the ENTIRE navbar (logo, a links, background lol) */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 25px;
+    left: 5px;
+    /* width: 7.5%;
+    height: 15%; */
+    width: 13%;
+    height: 24%;
+    z-index: 10;
+    background-color: var(--confederate-gray);
+    outline-style: solid;
+  } 
+  ul {
+    list-style: none;
+    /* line-height: 25px; */
+    line-height: 15pt;
+  }
+  li a {
+    text-decoration: none;
+    color: var(--ebony-black);
+    padding: 0.3rem; /* padding for the left     */
+    font-size: 9px;
+    margin: 10px 0 0 0;
+  }
 }
 
 /****************************************** FRONT PAGE SHIT ******************************************/
@@ -76,7 +169,6 @@ a:hover {
 .header {
   min-height: 100vh;
   width: 100%;
-  /* background-image: linear-gradient(rgba(122, 124, 133, 0.7), rgba(121, 123, 130, 0.7)), url(images/barracks.JPG); */
   background-image: linear-gradient(rgba(183, 185, 189, 0.7), rgba(183, 185, 189, 0.7)), url(images/barracks.JPG);
   background-position: center;
   background-size: cover; 
@@ -86,33 +178,73 @@ a:hover {
 .header-text {
   width: 90%;
   color: var(--ebony-black);
+  color: var(--ebony-black);
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
+/* latin is a p */
 .header-text .latin {
   position: absolute;
-  margin: 10px 0 40px;
+  margin: 10px 0 35px;
   font-size: 30px;
-  padding-top: 100px;
+  padding-top: 200px;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;  
 }
+/* date is also a p */
 .header-text .date {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* text-align: center;  */
-  /* padding-top: 300px; */
   padding-top: 325px;
-  font-size: 25px;
 }
-.logo img {
-  padding-top: 5px;
-  padding-left: 5px;
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  .date {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .date p {
+    font-size: 20px;
+    padding-top: 200px;
+  } 
+}
+@media screen and (max-width: 600px) { 
+  /* .header {
+    min-height: 70vh;
+    width: 100%;
+    max-width: 1280px;
+    background-image: linear-gradient(rgba(183, 185, 189, 0.7), rgba(183, 185, 189, 0.7)), url(images/barracks.JPG);
+    background-position: center;
+    background-size: cover; 
+    position: relative;  
+  } */
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .date {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .latin p {
+    font-size: 15px;
+  }
+  .date p {
+    font-size: 12px;
+    padding-top: 200px;
+  } 
 }
 
 /****************************************** QUOTE SECTION ******************************************/
@@ -120,7 +252,7 @@ a:hover {
   font-size: 100px;
 }
 .quotes p {
-  margin: 10px 0 40px;
+  margin: 10px 0 35px;
   padding-top: 60px;
 }
 
@@ -135,6 +267,8 @@ a:hover {
   /* background: #222; */
   /* background: #3c3b3b; */
   background: var(--dark-gray);
+  /* background: #3c3b3b; */
+  background: var(--dark-gray);
   display: flex;
   /* align-items: center;
   justify-content: center; */
@@ -144,11 +278,21 @@ a:hover {
   height: fit-content;
   /* border: 10px solid black; */
   border: 10px solid var(--ebony-black);
+  /* border: 10px solid black; */
+  border: 10px solid var(--ebony-black);
   outline-style: solid;
 }
 .swiper-slide img {
   width: 100%;
   height: 900px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  .swiper-slide img {
+    width: 100%;
+    height: 700px;
+  } 
 }
 .swiper-slide p {
   position: absolute;
@@ -157,20 +301,42 @@ a:hover {
   transform: translate(-50%, -50%);
   /* color: var(--confederate-gray); */
   color: var(--white-russian);
+  /* color: var(--confederate-gray); */
+  color: var(--white-russian);
   text-shadow: 3px 3px 3px red;
 }
 /* FOR THE COLORS OF THE ARROWS/DOTS. 
 HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 .swiper .swiper-button-prev, .swiper .swiper-button-next {
   color: var(--ebony-black);
+  color: var(--ebony-black);
 } 
 .swiper .swiper-pagination-bullet-active {
   background: var(--ebony-black);
 }
+@media screen and (max-width: 600px) { 
+  .quote-container {
+    min-height: 100vh;
+  }
+  .swiper {
+    width: 90%;
+    height: fit-content;
+    /* border: 10px solid black; */
+    border: 10px solid var(--ebony-black);
+    outline-style: solid;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 300px;
+  } 
+  .swiper-slide p {
+    font-size: 15px;
+  }
+}
 
 /****************************************** MISSION SECTION ******************************************/
 .mission {
-  min-height: 100vh;
+  min-height: 110vh;
   width: 100%;
   background-image: linear-gradient(rgba(199, 192, 192, 0.7), rgba(220, 218, 218, 0.7)), url(images/handsome/houston.jpg);
   /* background-image: url(images/handsome/houston.jpg); */
@@ -181,21 +347,25 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 .mission-text {
   width: 90%;
   color: var(--ebony-black);
+  color: var(--ebony-black);
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 .mission-text p, .training-text p {
   /* font-family: 'Black Ops One', cursive; */
   position: absolute;
   margin: 10px 0 40px;
+  font-size: 30px;
   padding-top: 500px;
   left: 50%; 
   transform: translate(-50%, -50%);
   text-align: center;  
   width: 55%;
+  /* line-height: 1.5; */
 }
 
 /****************************************** TRAINING SECTION ******************************************/
@@ -222,11 +392,13 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
   padding-top: 20%;
   line-height: 1.5;
 }
-.spec-text {
-  text-shadow: 3px 3px 3px red;
-}
 
 /****************************************** PICTURES SECTION ******************************************/
+/* FOR THE WHOLE PAGE */
+.pictures h2 {
+  color: var(--white-russian);
+  margin-top: 5%;
+}
 /* FOR THE WHOLE PAGE */
 .pictures h2 {
   color: var(--white-russian);
@@ -237,6 +409,7 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
   text-align: center;
   padding-top: 100px;
   background: var(--dark-gray);
+  padding-bottom: 5%;
 }
 .pictures-col {
   flex-basis: 33.333333%;
@@ -260,16 +433,44 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
   /* padding-left: 0; */
 }
 
+@media screen and (max-width: 600px) { 
+  /* add spacing for the macbook h1 titles */
+  .pictures-col img {
+    /* makes sure the images takes up the entire column item */
+    width: 100%;
+    height: 140px;
+    /* width: 100px;
+    object-fit: cover; */
+  }
+  /* .pictures {
+    padding-top: 60px;
+
+  } */
+}
+
 /****************************************** FAQS SECTION ******************************************/
 
 /* WHOLE ASS SECTION IS ALR. CENTERED. NO NEED TO DO FURTHER CENTERING SHIT FOR THE TEXT */
 .faqs {
+  width: 100%;
   margin: auto;
   text-align: center;
   padding-top: 180px;
-  background-image: linear-gradient(rgba(199, 192, 192, 0.7), rgba(220, 218, 218, 0.7)), url(images/soulfood.jpg);
-  min-height: 150vh;
-  padding-bottom: 100px;
+  /* background-image: linear-gradient(rgba(234, 226, 226, 0.7), rgba(225, 219, 219, 0.7)), url(images/soulfood.jpg); */
+  background-image: linear-gradient(rgba(234, 226, 226, 0.7), rgba(225, 219, 219, 0.7)), url(images/4k/black-students.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 160vh;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: 150px;
+
+  /* min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(183, 185, 189, 0.7), rgba(183, 185, 189, 0.7)), url(images/barracks.JPG);
+  background-position: center;
+  background-size: cover; 
+  position: relative;  */
 }
 .faqs h1 {
   width: 100%;
@@ -282,11 +483,6 @@ h3 {
   padding-top: 7%;
   margin-bottom: 2%;
   font-size: 60px;
-  /* position: relative;
-  width: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; */
 }
 li p {
   /* YES I GOT THIS SHIT TO COMPRESS AAAND STAY CENTERED */
@@ -295,25 +491,135 @@ li p {
   margin: 0 auto 0px;
   line-height: 1.5;
 }
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  /* add spacing for the macbook h3 titles */
+  h3 {
+    line-height: 1.1;
+  }
+}
+@media screen and (max-width: 600px) { 
+  .faqs {
+    padding-top: 20%;
+  }
+  /* add spacing for the macbook h1 titles */
+  .pictures-col img {
+    /* makes sure the images takes up the entire column item */
+    width: 100%;
+    height: 140px;
+    /* width: 100px;
+    object-fit: cover; */
+  }
+  .faqs h1 {
+    width: 100%;
+    color: var(--ebony-black);
+    position: relative;
+    font-size: 30px;
+    padding-bottom: 10%;
+  } 
+  h3 {
+    padding-top: 7%;
+    margin-bottom: 2%;
+    font-size: 20px;
+  }
+}
 
-/****************************************** CONTACT SECTION ******************************************/
+/****************************************** CONTACT SECTION (SHIT MADE IN MACBOOK) ******************************************/
 .footer {
   width: 100%;
   text-align: center;
-  padding: 200px 0;
+  padding: 100px 0;
   background-color: var(--dark-gray);
-  color: var(--white-russian)
+  color: var(--white-russian);
 } 
 .footer h4 {
-  font-size: 20px;
-  padding-bottom: 5%;
+  font-size: 25px;
+  padding-bottom: 1%;
+}
+.footer ul {
+  /* lol gotta use this width shit just to center the horizontal line. Primitive  */
+  width: 80%;
+  list-style-type: none;
+  /* display: table; */
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+  padding-bottom: 1%;
+}
+.footer ul li {
+  padding: 35px;
+  display: table-cell;
+  font-size: 18px;
+}
+.footer ul li a {
+  padding: 35px;
+  color: var(--white-russian);
+  font-size: 18px;
+  text-decoration: underline;
+}
+.footer ul li a:hover { 
+  color: #4b76db; 
+} /* CSS link hover */
+.footer p {
+  font-size: 14px;
 }
 
+@media screen and (max-width: 630px) { 
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 100px 0;
+    background-color: var(--dark-gray);
+    color: var(--white-russian);
+  } 
+  .footer h4 {
+    font-size: 25px;
+    padding-bottom: 1%;
+  }
+  .footer ul {
+    /* lol gotta use this width shit just to center the horizontal line. Primitive  */
+    width: 20%;
+    list-style-type: none;
+    /* display: table; */
+    text-align: center;
+    /* margin: 0;
+    padding: 0;
+    left: 50%; */
+    padding-bottom: 1%;
+  }
+  .footer ul li {
+    font-size: 18px;
+  }
+  .footer ul li a {
+    padding: 35px;
+    color: var(--white-russian);
+    font-size: 18px;
+    text-decoration: underline;
+  }
+}
 
-/* SHIT TO FIX 4 MACBOOK:
-  bigger navbar
-  smaller h1
-  more spacing between h1 and p. 
-  smaller h2
-  shorter title for second to last FAQ
-*/
+/* nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 25px;
+  left: 10px;
+  width: 3%;
+  height: 20%;
+  z-index: 10;
+  background-color: var(--confederate-gray);
+  outline-style: solid;
+} 
+ul {
+  list-style: none;
+  line-height: 21pt;
+}
+li a {
+  text-decoration: none;
+  color: var(--ebony-black);
+  padding: 2.6rem;     
+  font-size: 15px;
+  margin: 10px 0 0 0;
+} */
