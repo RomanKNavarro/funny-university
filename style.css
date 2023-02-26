@@ -5,7 +5,10 @@
 } 
 :root {
   --confederate-gray: #9a9494;
+  --confederate-gray: #9a9494;
   --dark-gray: #3c3b3b;
+  --white-russian: #ffff;
+  --ebony-black: #000000;
   --white-russian: #ffff;
   --ebony-black: #000000;
  }
@@ -175,6 +178,7 @@ screen and (min-device-pixel-ratio : 1.5) {
 .header-text {
   width: 90%;
   color: var(--ebony-black);
+  color: var(--ebony-black);
   position: absolute;
   top: 40%;
   left: 50%;
@@ -264,6 +268,8 @@ screen and (min-device-pixel-ratio : 1.5) {
   /* background: #222; */
   /* background: #3c3b3b; */
   background: var(--dark-gray);
+  /* background: #3c3b3b; */
+  background: var(--dark-gray);
   display: flex;
   /* align-items: center;
   justify-content: center; */
@@ -271,6 +277,8 @@ screen and (min-device-pixel-ratio : 1.5) {
 .swiper {
   width: 60%;
   height: fit-content;
+  /* border: 10px solid black; */
+  border: 10px solid var(--ebony-black);
   /* border: 10px solid black; */
   border: 10px solid var(--ebony-black);
   outline-style: solid;
@@ -293,11 +301,14 @@ screen and (min-device-pixel-ratio : 1.5) {
   transform: translate(-50%, -50%);
   /* color: var(--confederate-gray); */
   color: var(--white-russian);
+  /* color: var(--confederate-gray); */
+  color: var(--white-russian);
   text-shadow: 3px 3px 3px red;
 }
 /* FOR THE COLORS OF THE ARROWS/DOTS. 
 HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 .swiper .swiper-button-prev, .swiper .swiper-button-next {
+  color: var(--ebony-black);
   color: var(--ebony-black);
 } 
 .swiper .swiper-pagination-bullet-active {
@@ -336,6 +347,7 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 .mission-text {
   width: 90%;
   color: var(--ebony-black);
+  color: var(--ebony-black);
   position: absolute;
   top: 15%;
   left: 50%;
@@ -346,26 +358,14 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 .mission-text p, .training-text p {
   /* font-family: 'Black Ops One', cursive; */
   position: absolute;
-  margin: 10px 0 35px;
+  margin: 10px 0 40px;
+  font-size: 30px;
   padding-top: 500px;
   left: 50%; 
   transform: translate(-50%, -50%);
   text-align: center;  
   width: 55%;
-}
-
-@media screen and (max-width: 600px) { 
-  /* add spacing for the macbook h1 titles */
-  .mission-text p, .training-text p {
-    /* font-family: 'Black Ops One', cursive; */
-    position: absolute;
-    margin: 10px 0 35px;
-    padding-top: 200px;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    text-align: center;  
-    width: 80%;
-  }
+  /* line-height: 1.5; */
 }
 
 /****************************************** TRAINING SECTION ******************************************/
@@ -392,44 +392,13 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
   padding-top: 20%;
   line-height: 1.5;
 }
-.spec-text {
-  text-shadow: 3px 3px 3px red;
-  font-size: 30px;
-}
-.spec-text:hover {
-  text-decoration: none;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
-screen and (min-device-pixel-ratio : 1.5) { 
-  /* add spacing for the macbook h1 titles */
-  .mission-text h1, .training-text h1 {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-@media screen and (max-width: 600px) { 
-  .training {
-    min-height: 40vh;
-  }
-  .training-text {
-    padding-top: 100px;
-  }
-
-  .mission-text h1, .training-text h1 {
-    padding-top: 50px;
-    padding-bottom: 100px;
-  }
-  .spec-text {
-    text-shadow: 3px 3px 3px red;
-    font-size: 15px;
-  }
-  /* .training-text p {
-    
-  } */
-}
 
 /****************************************** PICTURES SECTION ******************************************/
+/* FOR THE WHOLE PAGE */
+.pictures h2 {
+  color: var(--white-russian);
+  margin-top: 5%;
+}
 /* FOR THE WHOLE PAGE */
 .pictures h2 {
   color: var(--white-russian);
