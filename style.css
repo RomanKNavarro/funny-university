@@ -392,6 +392,13 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
   padding-top: 20%;
   line-height: 1.5;
 }
+.spec-text {
+  text-shadow: 3px 3px 3px red;
+  font-size: 30px;
+}
+.spec-text:hover {
+  text-decoration: none;
+}
 
 /****************************************** PICTURES SECTION ******************************************/
 /* FOR THE WHOLE PAGE */
