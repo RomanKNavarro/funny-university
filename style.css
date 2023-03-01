@@ -538,15 +538,32 @@ screen and (min-device-pixel-ratio : 1.5) {
 }
 .footer ul {
   /* lol gotta use this width shit just to center the horizontal line. Primitive  */
-  width: 80%;
+  width: 50%;
+  /* transform: translate(-50%, -50%);
+  text-align: center; */
   list-style-type: none;
-  /* display: table; */
+  display: table;
   display: inline-block;
-  text-align: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  left: 50%;
+  /* left: 50%; */
   padding-bottom: 1%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
+screen and (min-device-pixel-ratio : 1.5) { 
+  .footer ul {
+    /* lol gotta use this width shit just to center the horizontal line. Primitive  */
+    width: 80%;
+    list-style-type: none;
+    /* display: table; */
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    padding-bottom: 1%;
+  }
 }
 .footer ul li {
   padding: 35px;
