@@ -257,6 +257,7 @@ screen and (min-device-pixel-ratio : 1.5) {
 }
 
 /****************************************** SLIDE SHIT ******************************************/
+/* this is just for the whole section in general */
 .quote-container {
   position: relative;
   padding-top: 15%;
@@ -286,7 +287,6 @@ screen and (min-device-pixel-ratio : 1.5) {
   width: 100%;
   height: 900px;
 }
-
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
 screen and (min-device-pixel-ratio : 1.5) { 
   .swiper-slide img {
@@ -391,6 +391,13 @@ HERE'S HOW TO INCLUDE MULTIPLE NESTED ELEMENTS */
 .training-text p {
   padding-top: 20%;
   line-height: 1.5;
+}
+.spec-text {
+  text-shadow: 3px 3px 3px red;
+  font-size: 30px;
+}
+.spec-text:hover {
+  text-decoration: none;
 }
 
 /****************************************** PICTURES SECTION ******************************************/
