@@ -138,8 +138,8 @@ screen and (min-device-pixel-ratio : 1.5) {
   }
   /* for the ENTIRE navbar (logo, a links, background lol) */
   .nav {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     position: fixed;
     top: 25px;
     left: 5px;
@@ -147,7 +147,7 @@ screen and (min-device-pixel-ratio : 1.5) {
     height: 15%; */
     width: 13%;
     /* height: 19.5%; */
-    height: 30%;
+    height: 170px;
     z-index: 10;
     background-color: var(--confederate-gray);
     outline-style: solid;
@@ -652,26 +652,3 @@ screen and (min-device-pixel-ratio : 1.5) {
   }
 }
 
-/* nav {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 25px;
-  left: 10px;
-  width: 3%;
-  height: 20%;
-  z-index: 10;
-  background-color: var(--confederate-gray);
-  outline-style: solid;
-} 
-ul {
-  list-style: none;
-  line-height: 21pt;
-}
-li a {
-  text-decoration: none;
-  color: var(--ebony-black);
-  padding: 2.6rem;     
-  font-size: 15px;
-  margin: 10px 0 0 0;
-} */
