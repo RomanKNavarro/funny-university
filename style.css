@@ -138,8 +138,9 @@ screen and (min-device-pixel-ratio : 1.5) {
   }
   /* for the ENTIRE navbar (logo, a links, background lol) */
   .nav {
-    /* display: flex;
-    flex-direction: column; */
+    display: none;      /* <---- Hiding this stupid navbar for now*/
+    /* display: flex; */
+    flex-direction: column;
     position: fixed;
     top: 25px;
     left: 5px;
@@ -163,7 +164,7 @@ screen and (min-device-pixel-ratio : 1.5) {
     padding: 0.3rem; /* padding for the left     */
     font-size: 9px;
     margin: 10px 0 0 0;
-  }
+  } 
 }
 
 /****************************************** FRONT PAGE SHIT ******************************************/
