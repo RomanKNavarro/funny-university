@@ -102,6 +102,7 @@ a:hover {
   height: auto;
 }
 
+/* FOR MACBOOK */
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only 
 screen and (min-device-pixel-ratio : 1.5) { 
   .nav {
@@ -125,6 +126,7 @@ screen and (min-device-pixel-ratio : 1.5) {
   }
 }
 
+/* FOR MOBILE */
 @media screen and (max-width: 500px) {
   .logo img {
     padding-top: 5px;
@@ -144,7 +146,7 @@ screen and (min-device-pixel-ratio : 1.5) {
     /* width: 7.5%;
     height: 15%; */
     width: 13%;
-    height: 18%;
+    height: 19.5%;
     z-index: 10;
     background-color: var(--confederate-gray);
     outline-style: solid;
